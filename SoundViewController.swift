@@ -14,20 +14,49 @@ class SoundViewController: UIViewController {
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var soundTextField: UITextField!
+    @IBOutlet weak var playTapped: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var audioRecorder : AVAudioRecorder?
+    var audioPlayer : AVAudioPlayer?
+    var audioURL : URL?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Dispable the playButton
+        playTapped.isEnabled = false
         
+        // Do any additional setup after loading the view.
         setupRecorder()
     }
 
     
     @IBAction func recordTapped(_ sender: Any) {
+        if audioRecorder!.isRecording {
+           // Stop the recording, change button title to record
+            recordButton.setTitle("Record", for: .normal)
+            audioRecorder!.stop()
+            // enable button
+            playTapped.isEnabled = true
+        }
+            else{
+                // Start the recording
+                audioRecorder!.record()
+                recordButton.setTitle("Stop", for: .normal)
+        }
+    
     }
-  
-    @IBOutlet weak var playTapped: UIButton!
+   
+    
+    @IBAction func playtTapped(_ sender: Any) {
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: audioURL!)
+            audioPlayer?.play()
+        }
+        catch {}
+    }
     
     @IBAction func addTapped(_ sender: Any) {
     }
@@ -51,9 +80,8 @@ class SoundViewController: UIViewController {
             // Create URL for Audio
             let basePath : String = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true).first!
             
-            
             let pathComponents = [basePath, "audio.m4a"]
-            let audioURL = NSURL.fileURL(withPathComponents: pathComponents)!
+            audioURL = NSURL.fileURL(withPathComponents: pathComponents)!
             
 
             // Create Settings for Audio object
@@ -64,7 +92,7 @@ class SoundViewController: UIViewController {
             
             
             // Create Audio Record object
-            let audioRecorder = try AVAudioRecorder(url: audioURL, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: audioURL!, settings: settings)
         } catch {}
 
     }

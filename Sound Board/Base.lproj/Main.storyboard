@@ -68,6 +68,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBw-JS-bCW">
                                 <rect key="frame" x="172" y="134" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playtTapped:" destination="vSa-B9-MOm" eventType="touchUpInside" id="h9M-ww-gHB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llN-wU-2XT">
                                 <rect key="frame" x="87.5" y="184" width="200" height="30"/>
@@ -99,6 +102,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="RdJ-Jc-fqu" id="5XV-1z-hK2"/>
                         <outlet property="playTapped" destination="hBw-JS-bCW" id="A5P-T8-qZC"/>
                         <outlet property="recordButton" destination="iOC-ol-0KE" id="KgS-qY-fyf"/>
                         <outlet property="soundTextField" destination="llN-wU-2XT" id="a5C-Y3-XhU"/>
