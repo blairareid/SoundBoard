@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" id="f0r-VW-VlQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8KH-EU-MbA">
                             <connections>
-                                <segue destination="4id-O9-YLZ" kind="show" id="Pyb-bO-YNN"/>
+                                <segue destination="vSa-B9-MOm" kind="show" id="dka-Yf-SsI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,70 +47,66 @@
             <point key="canvasLocation" x="932" y="-532"/>
         </scene>
         <!--Sound View Controller-->
-        <scene sceneID="BUD-6Y-7KV">
+        <scene sceneID="LnT-K7-Yoz">
             <objects>
-                <viewController id="4id-O9-YLZ" customClass="SoundViewController" customModule="Sound_Board" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vSa-B9-MOm" customClass="SoundViewController" customModule="Sound_Board" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AAW-QH-AL9"/>
-                        <viewControllerLayoutGuide type="bottom" id="YfM-ww-De5"/>
+                        <viewControllerLayoutGuide type="top" id="Ic3-cb-1rZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="abb-OD-gyd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7ui-vm-izF">
+                    <view key="view" contentMode="scaleToFill" id="9QA-mN-Anh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-vw-Oy4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOC-ol-0KE">
                                 <rect key="frame" x="163" y="84" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
-                                    <action selector="recordTapped:" destination="4id-O9-YLZ" eventType="touchUpInside" id="vgI-88-0kq"/>
+                                    <action selector="recordTapped:" destination="vSa-B9-MOm" eventType="touchUpInside" id="nFz-gq-X9V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCZ-nc-cde">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBw-JS-bCW">
                                 <rect key="frame" x="172" y="134" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="playTapped:" destination="4id-O9-YLZ" eventType="touchUpInside" id="awp-3W-ZQ8"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRf-yi-Sgs">
-                                <rect key="frame" x="88.5" y="184" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llN-wU-2XT">
+                                <rect key="frame" x="87.5" y="184" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="XjS-yQ-S9B"/>
+                                    <constraint firstAttribute="width" constant="200" id="VZm-cg-KQR"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-oU-FOm">
-                                <rect key="frame" x="172" y="234" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-Jc-fqu">
+                                <rect key="frame" x="172.5" y="234" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addTapped:" destination="4id-O9-YLZ" eventType="touchUpInside" id="6zT-Gm-FqZ"/>
+                                    <action selector="addTapped:" destination="vSa-B9-MOm" eventType="touchUpInside" id="Jgb-aa-0bn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q7E-vw-Oy4" firstAttribute="centerX" secondItem="7ui-vm-izF" secondAttribute="centerX" id="FkT-tc-aLU"/>
-                            <constraint firstItem="W7a-oU-FOm" firstAttribute="top" secondItem="nRf-yi-Sgs" secondAttribute="bottom" constant="20" id="NME-IU-quN"/>
-                            <constraint firstItem="q7E-vw-Oy4" firstAttribute="top" secondItem="AAW-QH-AL9" secondAttribute="bottom" constant="20" id="ONy-jH-g22"/>
-                            <constraint firstItem="aCZ-nc-cde" firstAttribute="centerX" secondItem="7ui-vm-izF" secondAttribute="centerX" id="XBD-Am-ESa"/>
-                            <constraint firstItem="aCZ-nc-cde" firstAttribute="top" secondItem="q7E-vw-Oy4" secondAttribute="bottom" constant="20" id="mNZ-dJ-8cj"/>
-                            <constraint firstItem="nRf-yi-Sgs" firstAttribute="centerX" secondItem="7ui-vm-izF" secondAttribute="centerX" constant="1" id="mq5-nV-tgc"/>
-                            <constraint firstItem="W7a-oU-FOm" firstAttribute="centerX" secondItem="7ui-vm-izF" secondAttribute="centerX" id="oFN-0d-4GQ"/>
-                            <constraint firstItem="nRf-yi-Sgs" firstAttribute="top" secondItem="aCZ-nc-cde" secondAttribute="bottom" constant="20" id="zls-Ap-ke1"/>
+                            <constraint firstItem="iOC-ol-0KE" firstAttribute="top" secondItem="Ic3-cb-1rZ" secondAttribute="bottom" constant="20" id="DsC-LC-nqy"/>
+                            <constraint firstItem="hBw-JS-bCW" firstAttribute="top" secondItem="iOC-ol-0KE" secondAttribute="bottom" constant="20" id="L1k-6c-df0"/>
+                            <constraint firstItem="hBw-JS-bCW" firstAttribute="centerX" secondItem="9QA-mN-Anh" secondAttribute="centerX" id="NfD-hG-H06"/>
+                            <constraint firstItem="llN-wU-2XT" firstAttribute="top" secondItem="hBw-JS-bCW" secondAttribute="bottom" constant="20" id="Ura-da-ZF4"/>
+                            <constraint firstItem="llN-wU-2XT" firstAttribute="centerX" secondItem="9QA-mN-Anh" secondAttribute="centerX" id="WPU-Sl-OTL"/>
+                            <constraint firstItem="iOC-ol-0KE" firstAttribute="centerX" secondItem="9QA-mN-Anh" secondAttribute="centerX" id="bVg-AY-9Ay"/>
+                            <constraint firstItem="RdJ-Jc-fqu" firstAttribute="top" secondItem="llN-wU-2XT" secondAttribute="bottom" constant="20" id="qYE-hT-jce"/>
+                            <constraint firstItem="RdJ-Jc-fqu" firstAttribute="centerX" secondItem="9QA-mN-Anh" secondAttribute="centerX" id="xUL-EL-N31"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addTapped" destination="W7a-oU-FOm" id="x0I-ji-7fN"/>
-                        <outlet property="nameTextField" destination="nRf-yi-Sgs" id="tgr-47-Fox"/>
-                        <outlet property="playTapped" destination="aCZ-nc-cde" id="e1h-pG-zga"/>
-                        <outlet property="recordButton" destination="q7E-vw-Oy4" id="5CO-GH-kKa"/>
+                        <outlet property="playTapped" destination="hBw-JS-bCW" id="A5P-T8-qZC"/>
+                        <outlet property="recordButton" destination="iOC-ol-0KE" id="KgS-qY-fyf"/>
+                        <outlet property="soundTextField" destination="llN-wU-2XT" id="a5C-Y3-XhU"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Z3-Wn-aFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2H-Vi-yKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="-529.38530734632684"/>
+            <point key="canvasLocation" x="1709.5999999999999" y="-591.45427286356824"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qMf-We-xuo">
