@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					15D824781E27D3020030BF05 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 86F726NK56;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -264,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86F726NK56;
 				INFOPLIST_FILE = "Sound Board/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blair.a.reid.Sound-Board";
@@ -276,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86F726NK56;
 				INFOPLIST_FILE = "Sound Board/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blair.a.reid.Sound-Board";
